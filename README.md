@@ -7,7 +7,8 @@ Google doc w/ more experiment results: https://docs.google.com/document/d/1RE-Px
 
 Experiments matching rocks between timeframes using Similarity measures (TS_SS, Eucledian distance)
 
-RM_2_7_NB.ipynb -- Notebook for testing TS_SS on synthetic rock shp-- adjust params to maniupulate rocks in time frame 2 (df3)
+RM_2_7_TS_SS.ipynb -- Notebook for testing TS_SS on synthetic rock shp-- adjust params to maniupulate rocks in time frame 2 (df3)
+RM_2_7_Eucld.ipynb -- Notebook for testing Euclidean distance on synthetic rock shp-- adjust params to maniupulate rocks in time frame 2 (df3)
 
 RM_functions.py -- Functions for calculating geometric params, similarity measures, and visualization
 
