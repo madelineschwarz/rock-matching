@@ -1,6 +1,7 @@
 # rock-matching
 
 see original code & work: https://github.com/DREAMS-lab/Rock-Matching
+Paper describing similarity measures: https://ieeexplore.ieee.org/document/7474366
 
 Google doc w/ more experiment results: https://docs.google.com/document/d/1RE-Px5IzLaEQ2IqLfXErNH-AShPVS5YmE8WNS0xlKAQ/edit?usp=sharing
 
