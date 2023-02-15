@@ -112,32 +112,29 @@ def get_rock_and_line(method, df1, df2):
         df1['matching_rock'][i] = df2['centroid'][df1['nearest_matching_polygon'+method][i]]
     df1['line'] = df1.apply(lambda x: LineString([x['centroid'], x['matching_rock']]), axis=1)
     return df1 
-        #if df1['nearest_matching_polygon'+method][i] != None:
-            #df1['matching_rock'][i] = df2['centroid'][df1['nearest_matching_polygon'+method][i]]
-        #else:
-           # continue
-        #df1['line'] = df1.apply(lambda x: LineString([x['centroid'], x['matching_rock']]), axis=1)
-    #return df1 
+       
 
 # 1/26/23: Note-- this function is designed to check
 # synthetic rock datasets, not real dataset (where rock order in df may differ)
-def check_matches(method,df1,df2):
+def check_matches(method,df1,df2,Print_m):
     correct_m = 0
     incorrect_m = 0
     print('checking matches:')
     for i in range(len(df1)):
-        print(i, df1['nearest_matching_polygon'+method][i])
         if df1['nearest_matching_polygon'+method][i] != i:
             #print('incorrect match')
             incorrect_m = incorrect_m + 1
         else:
             #print('correct')
             correct_m = correct_m + 1
-    print('Similarity measure used: ', method)
-    print('Number of rocks in TimeFrame 1: ', len(df1))
-    print('Number of rocks in TimeFrame 2: ', len(df2))
-    print('Correct matches:', correct_m)
-    print('Incorrect matches:', incorrect_m)
+    if Print_m == True:
+        print(i, df1['nearest_matching_polygon'+method][i])
+        print('Similarity measure used: ', method)
+        print('Number of rocks in TimeFrame 1: ', len(df1))
+        print('Number of rocks in TimeFrame 2: ', len(df2))
+        print('Correct matches:', correct_m)
+        print('Incorrect matches:', incorrect_m)
+    return correct_m, incorrect_m
 
     #%%
 #vec1 = [0]
